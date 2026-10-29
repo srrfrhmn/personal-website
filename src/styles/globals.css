@@ -14,7 +14,8 @@ body { margin: 0; background: #0a0a0a; color: #f5f5f5; font-family: Arial, Helve
 .main-cont { width: 100%; padding: 0; }
 .page-divider { border: 0; border-top: 0.0625rem solid #262626; margin: 1.25rem 0 1.5rem; }
 .landing { padding: 0; }
-.single-page .landing { min-height: calc(100svh - var(--content-top)); scroll-margin-top: var(--content-top); }
+.single-page .landing { min-height: calc(100svh - var(--content-top)); padding-bottom: 4rem; scroll-margin-top: var(--content-top); }
+.landing-intro { position: sticky; top: var(--content-top); }
 .portfolio-section { padding-bottom: 7rem; scroll-margin-top: var(--content-top); }
 .portfolio-section:last-child { min-height: 60vh; }
 .page:has(.landing) { padding-bottom: 1.5rem; }
@@ -88,6 +89,7 @@ a:focus-visible, button:focus-visible { outline: 0.125rem solid #fff; outline-of
   .nav-stickman { display: none; }
   .main-cont { scroll-margin-top: 6rem; }
   .single-page .landing { padding-top: 14vh; min-height: calc(100svh - 7rem); scroll-margin-top: 7rem; }
+  .landing-intro { top: 7rem; }
   .portfolio-section { scroll-margin-top: 7rem; padding-bottom: 5rem; }
   .landing h1 { font-size: 2rem; flex-wrap: wrap; }
   .contact-links a { display: inline-flex; align-items: center; min-height: 2.75rem; }

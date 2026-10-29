@@ -14,11 +14,13 @@ export default function Home({ posts }: { posts: PostSummary[] }) {
   return (
     <main id="main-content" className="main-cont single-page">
       <section id="me" className="landing" aria-labelledby="me-title">
+      <div className="landing-intro">
       <h1 id="me-title" className="default-font text-4xl tracking-tighter flex items-center">
         <FullName />
         <AnimatedWave />
       </h1>
       <Contact />
+      </div>
       </section>
       <CareerSection />
       <GallerySection />
