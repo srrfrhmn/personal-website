@@ -6,14 +6,13 @@ import '../styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter()
-  const section = pathname === '/career' ? 'Career' : pathname === '/gallery' ? 'Gallery' : pathname.startsWith('/blog') ? 'Blog' : 'Software Engineer'
+  const section = pathname === '/career' ? 'Career' : pathname === '/gallery' ? 'Gallery' : pathname.startsWith('/blog') ? 'Blog' : null
+  const title = section ? `Sarraf Rahman | ${section}` : 'Sarraf Rahman'
   return (
     <>
       <Head>
-        <title>{`Sarraf Rahman | ${section}`}</title>
-        <meta name="description" content="Sarraf Rahman's portfolio: software engineering, computer science and economics, and photography." key="description" />
-        <meta property="og:title" content={`Sarraf Rahman | ${section}`} key="og-title" />
-        <meta property="og:description" content="Software engineering, computer science and economics, and photography." key="og-description" />
+        <title>{title}</title>
+        <meta property="og:title" content={title} key="og-title" />
         <meta property="og:image" content="https://srrfrhmn.com/srrf_logo.png" />
         <meta property="og:locale" content="en_CA" />
         <meta property="og:type" content="website" key="og-type" />
